@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>너의 마음을 말해보는, 타임</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="mind-7">
+    <div class="mind-content">
+      <!-- Hearder nav -->
+      <nav>
+        <div onclick="ShowMenu()" class="menu-icon side">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="center">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+
+        <div class="side"></div>
+      </nav>
+      <!-- Hearder nav -->
+
+      <!-- Content -->
+      <div class="content">
+        <div class="btn left">
+          <a href="./mind-6.html">
+            <img src="./images/prev_blue.png" alt="next" />
+          </a>
+        </div>
+        <div>
+          <div class="mind-desc">
+            <p>평소 편안할 때 하는 활동이 하나의 STOP방법이 될 수 있습니다.</p>
+            <p>아직, 한번도 내가 무엇을 하면 기분이 편안해지고 좋아지는지..</p>
+            <p>생각해본 적이 없나요?</p>
+            <p>
+              그럼 여기 ____친구와 비슷한 경험을 가진 친구의 이야기를
+              들어볼까요?
+            </p>
+          </div>
+
+          <div class="listen-btn" onclick="openModal(1);">들어보기</div>
+        </div>
+
+        <div class="btn right">
+          <a href="./mind-8.html">
+            <img src="./images/next_blue.png" alt="next" />
+          </a>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+
+    <!-- Layer Popup -->
+    <div class="modal-background1 modal-background">
+      <div class="modal-content">
+        <div class="sound-icon">
+          <img src="./images/sound.png" alt="듣기" />
+        </div>
+
+        <div class="modal-desc mind-modal-desc"></div>
+
+        <div class="modal-next">다음</div>
+      </div>
+    </div>
+
+    <!-- 사이드 메뉴 -->
+    <div class="menu_bg">
+      <div class="menu">
+        <!-- 닫기 -->
+        <div onclick="HideMenu()" class="cancel-icon">
+          <img src="./images/cancel.png" alt="cancel" />
+        </div>
+
+        <div class="menu-container">
+          <!-- 메뉴 1 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mind</span>
+                <span class="menu-title">너의 마음을 말할, 타임</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon1"
+                onclick="ShowSubMenu(1)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub1">
+              <ul>
+                <li><a href="">상황인식</a></li>
+                <li><a href="">감정인식</a></li>
+                <li><a href="">stop 방법찾기</a></li>
+                <li><a href="">사회적 지지체계</a></li>
+                <li><a href="">위기사항 119</a></li>
+                <li><a href="">자해방지서약서 작성해보기</a></li>
+                <li><a href="" class="last">완성된 '내 마음, TAYM'</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 2 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mood</span>
+                <span class="menu-title">오늘 기분은 어때?</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon2"
+                onclick="ShowSubMenu(2)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub2">
+              <ul>
+                <li><a href="">오늘의 감정 확인, 표현해보기</a></li>
+                <li><a href="">우울척도 검사해보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-you</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 4 -->
+          <div class="menu-column">
+            <a href="./junior-1.html">
+              <div>
+                <span class="menu-strong">TAYM-junior</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-info</span>
+                <span class="menu-title">전문적인 정보</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 사이드 메뉴 -->
+
+    <!-- Footer nav -->
+    <footer>
+      <div>
+        <a href="./home.html">
+          <img src="./images/footer_icon_1.png" alt="home" class="home-icon" />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img
+            src="./images/footer_icon_2.png"
+            alt="modify"
+            class="modify-icon"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img
+            src="./images/footer_icon_3.png"
+            alt="graph"
+            class="graph-icon"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img src="./images/footer_icon_4.png" alt="call" class="call-icon" />
+        </a>
+      </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>너의 마음을 말해보는, 타임</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="mind-content">
+      <!-- Hearder nav -->
+      <nav>
+        <div onclick="ShowMenu()" class="menu-icon side">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="center">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+
+        <div class="side"></div>
+      </nav>
+      <!-- Hearder nav -->
+
+      <!-- Content -->
+      <div class="content">
+        <div class="btn left">
+          <!-- <img src="./images/prev_gray.png" alt="next" /> -->
+        </div>
+        <div class="mind-desc">
+          <p>
+            먼저, 나 스스로에게 고통을 주고 싶은, 자해충동이 들 때의 상황을 본인
+            스스로 확인하는 것이 중요합니다.
+          </p>
+          <p>
+            가장 최근에 어떤 상황이나 생각들이 나를 괴롭히고 불안하게 하며,
+            자해로 이어지게 했는지 적어볼께요.
+          </p>
+          <p>꼭 하나의 상황만 있는 것은 아닐 것이라 생각해요.</p>
+          <p>생각나는 대로 모두 적어도 괜찮아요.</p>
+        </div>
+        <div class="btn right">
+          <a href="./mind-2.html">
+            <img src="./images/next_blue.png" alt="next" />
+          </a>
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+
+    <!-- 사이드 메뉴 -->
+    <div class="menu_bg">
+      <div class="menu">
+        <!-- 닫기 -->
+        <div onclick="HideMenu()" class="cancel-icon">
+          <img src="./images/cancel.png" alt="cancel" />
+        </div>
+
+        <div class="menu-container">
+          <!-- 메뉴 1 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mind</span>
+                <span class="menu-title">너의 마음을 말할, 타임</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon1"
+                onclick="ShowSubMenu(1)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub1">
+              <ul>
+                <li><a href="">상황인식</a></li>
+                <li><a href="">감정인식</a></li>
+                <li><a href="">stop 방법찾기</a></li>
+                <li><a href="">사회적 지지체계</a></li>
+                <li><a href="">위기사항 119</a></li>
+                <li><a href="">자해방지서약서 작성해보기</a></li>
+                <li><a href="" class="last">완성된 '내 마음, TAYM'</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 2 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mood</span>
+                <span class="menu-title">오늘 기분은 어때?</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon2"
+                onclick="ShowSubMenu(2)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub2">
+              <ul>
+                <li><a href="">오늘의 감정 확인, 표현해보기</a></li>
+                <li><a href="">우울척도 검사해보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-you</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 4 -->
+          <div class="menu-column">
+            <a href="./junior-1.html">
+              <div>
+                <span class="menu-strong">TAYM-junior</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-info</span>
+                <span class="menu-title">전문적인 정보</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 사이드 메뉴 -->
+
+    <!-- Footer nav -->
+    <footer>
+      <footer>
+        <div>
+          <a href="./home.html">
+            <img src="./images/footer_icon_1.png" alt="home" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="./images/footer_icon_2.png" alt="modify" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="./images/footer_icon_3.png" alt="graph" />
+          </a>
+        </div>
+        <div>
+          <a href="">
+            <img src="./images/footer_icon_4.png" alt="call" />
+          </a>
+        </div>
+      </footer>
+    </footer>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

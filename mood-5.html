@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>너의 마음을 말해보는, 타임</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="mood">
+    <div class="mood-content">
+      <!-- Hearder nav -->
+      <nav>
+        <div onclick="ShowMenu()" class="menu-icon side">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <div class="center">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+
+        <div class="side"></div>
+      </nav>
+      <!-- Hearder nav -->
+
+      <!-- Content -->
+      <div class="content">
+        <div class="btn left">
+          <a href="./mood-4.html">
+            <img src="./images/prev_blue.png" alt="next" />
+          </a>
+        </div>
+        <div class="mood-test-container">
+          <div class="mind-select-title center small">
+            해당하는 기한에 맞춰 번호를 선택해주세요.
+          </div>
+
+          <div class="day-standard">
+            <div>1일 미만</div>
+            <div>1~2일</div>
+            <div>3~4일</div>
+            <div>5~7일</div>
+            <div>
+              2주간 <br />
+              거의 매일
+            </div>
+          </div>
+
+          <div class="mood-test-wrapper">
+            <div class="mood-test-title">식욕이 없었다.</div>
+            <div class="mood-test-num-wrapper">
+              <div class="mood-test-num">0</div>
+              <div class="mood-test-num">1</div>
+              <div class="mood-test-num">2</div>
+              <div class="mood-test-num select">3</div>
+              <div class="mood-test-num">4</div>
+            </div>
+          </div>
+
+          <div class="mood-test-wrapper">
+            <div class="mood-test-title">
+              울적한 기분을 떨쳐 버릴 수 없었다.
+            </div>
+            <div class="mood-test-num-wrapper">
+              <div class="mood-test-num">0</div>
+              <div class="mood-test-num">1</div>
+              <div class="mood-test-num">2</div>
+              <div class="mood-test-num select">3</div>
+              <div class="mood-test-num">4</div>
+            </div>
+          </div>
+
+          <div class="mood-test-wrapper">
+            <div class="mood-test-title">
+              무슨 일을 하든 정신을 집중하기가 힘들었다.
+            </div>
+            <div class="mood-test-num-wrapper">
+              <div class="mood-test-num">0</div>
+              <div class="mood-test-num">1</div>
+              <div class="mood-test-num">2</div>
+              <div class="mood-test-num select">3</div>
+              <div class="mood-test-num">4</div>
+            </div>
+          </div>
+
+          <div class="mood-test-wrapper">
+            <div class="mood-test-title">상당히 우울했다.</div>
+            <div class="mood-test-num-wrapper">
+              <div class="mood-test-num">0</div>
+              <div class="mood-test-num">1</div>
+              <div class="mood-test-num">2</div>
+              <div class="mood-test-num select">3</div>
+              <div class="mood-test-num">4</div>
+            </div>
+          </div>
+
+          <div class="mood-test-wrapper">
+            <div class="mood-test-title">
+              잠을 설쳤다. (잠을 잘 이루지 못했다.)
+            </div>
+            <div class="mood-test-num-wrapper">
+              <div class="mood-test-num">0</div>
+              <div class="mood-test-num">1</div>
+              <div class="mood-test-num">2</div>
+              <div class="mood-test-num select">3</div>
+              <div class="mood-test-num">4</div>
+            </div>
+          </div>
+
+          <a href="./mood-6.html">
+            <div class="listen-btn">다음</div>
+          </a>
+        </div>
+
+        <div class="btn right">
+          <!-- <a href="./mood-5.html">
+            <img src="./images/next_blue.png" alt="next" />
+          </a> -->
+        </div>
+      </div>
+      <!-- Content -->
+    </div>
+
+    <!-- Layer Popup -->
+    <div class="modal-background1 modal-background">
+      <div class="modal-content">
+        <div class="modal-desc">우울한 마음을 털어놓을까?</div>
+
+        <div class="modal-btn-column">
+          <a href="tel:1388">
+            <div class="call-btn">
+              <img src="./images/call.png" alt="call" />
+              <span>1388</span>
+            </div>
+          </a>
+          <div class="close">괜찮아</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 사이드 메뉴 -->
+    <div class="menu_bg">
+      <div class="menu">
+        <!-- 닫기 -->
+        <div onclick="HideMenu()" class="cancel-icon">
+          <img src="./images/cancel.png" alt="cancel" />
+        </div>
+
+        <div class="menu-container">
+          <!-- 메뉴 1 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mind</span>
+                <span class="menu-title">너의 마음을 말할, 타임</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon1"
+                onclick="ShowSubMenu(1)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub1">
+              <ul>
+                <li><a href="">상황인식</a></li>
+                <li><a href="">감정인식</a></li>
+                <li><a href="">stop 방법찾기</a></li>
+                <li><a href="">사회적 지지체계</a></li>
+                <li><a href="">위기사항 119</a></li>
+                <li><a href="">자해방지서약서 작성해보기</a></li>
+                <li><a href="" class="last">완성된 '내 마음, TAYM'</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 2 -->
+          <div class="menu-column">
+            <div class="munu-wrapper">
+              <div>
+                <span class="menu-strong">TAYM-mood</span>
+                <span class="menu-title">오늘 기분은 어때?</span>
+              </div>
+              <img
+                src="./images/open_menu.png"
+                alt="펼치기"
+                class="show-icon2"
+                onclick="ShowSubMenu(2)"
+              />
+            </div>
+
+            <!-- 펼침 메뉴 -->
+            <div class="menu_2" id="sub2">
+              <ul>
+                <li><a href="">오늘의 감정 확인, 표현해보기</a></li>
+                <li><a href="">우울척도 검사해보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-you</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 4 -->
+          <div class="menu-column">
+            <a href="./junior-1.html">
+              <div>
+                <span class="menu-strong">TAYM-junior</span>
+                <span class="menu-title">너는 어떤 친구이니?</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- 메뉴 3 -->
+          <div class="menu-column">
+            <a href="">
+              <div>
+                <span class="menu-strong">TAYM-info</span>
+                <span class="menu-title">전문적인 정보</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 사이드 메뉴 -->
+
+    <!-- Footer nav -->
+    <footer>
+      <div>
+        <a href="./home.html">
+          <img src="./images/footer_icon_1.png" alt="home" class="home-icon" />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img
+            src="./images/footer_icon_2.png"
+            alt="modify"
+            class="modify-icon"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img
+            src="./images/footer_icon_3.png"
+            alt="graph"
+            class="graph-icon"
+          />
+        </a>
+      </div>
+      <div>
+        <a href="">
+          <img src="./images/footer_icon_4.png" alt="call" class="call-icon" />
+        </a>
+      </div>
+    </footer>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>

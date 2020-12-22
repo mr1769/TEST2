@@ -204,30 +204,31 @@
   <!-- Layer Popup 1 -->
   <div class="modal-background1 modal-background">
     <div class="modal-content">
-      <div>
-        <img src="./images/wrist_bg.png" alt="손목" class="wrist-bg" />
+      <div class="wrist-bg">
+        <canvas id="drawCanvas" width="326" height="200" style="
+                    border-radius: 4px;
+                    background-color: white;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                  "></canvas>
+
+        <!--사진찍기-->
+        <div class="take-photo">
+          <input type="file" id="camera" name="camera" capture="camera" accept="image/*" />
+          <br />
+          <img id="pic" style="width: 100%" />
+        </div>
+
+        <!--사진 불러오기-->
+        <div class="import-photo">
+          <input type="file" id="upImgFile" onChange="uploadImgPreview();" accept="image/*" />
+        </div>
       </div>
 
-      <!-------------작업중입니다--------------------------------->
-
-      <!--사진찍기와 불러오기 작업-->
-
-      <div class="photo_management">
-        <div class="take_pictures">
-          <button>사진찍기</button>
-        </div>
-        <div class="load_file">
-          <input type="file" id="upImgFile" onChange="uploadImgPreview();" accept="image/*" value="불러오기">
-        </div>
-      </div>
-
-      <!--사진찍기와 불러오기 작업 종료-->
 
       <div class="wrist-write">
         <img src="./images/wrist_write.png" alt="그리기" />
-        <canvas id="drawCanvas" width="326" height="280" style="border-radius: 4px; background-color: white; background-position: "></canvas>
-        <!--작업중입니다.------------------------------------------>
-
         <span>그려보기</span>
       </div>
 
@@ -382,6 +383,7 @@
   </script>
 
   <script src="./js/scripts.js"></script>
+
 </body>
 
 </html>

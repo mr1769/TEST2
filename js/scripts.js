@@ -154,15 +154,79 @@ function printDiff() {
 
 }
 
-// 불러오기 파일 처리
+// 파일 업로드 
 
 function uploadImgPreview() {
-    
+  // @breif 업로드 파일 읽기
+
   let fileInfo = document.getElementById("upImgFile").files[0];
+
   let reader = new FileReader();
 
-  reader.onload = function() {
-    document.getElementById("drawCanvas").style.backgroundImage = 'url(${reader.result})';
-    
+  reader.onload = function () {
+
+    document.getElementById(
+      "drawCanvas"
+    ).style.backgroundImage = `url(${reader.result})`;
+  };
+
+  if (fileInfo) {
+
+    reader.readAsDataURL(fileInfo);
   }
+
+
+  $(document).ready(function () {
+
+    var drawCanvas = document.getElementById("drawCanvas");
+
+    if (typeof drawCanvas.getContext == "function") {
+
+      var colors = [{
+        style: "#ff0000",
+      }, ];
+
+      var ctx = drawCanvas.getContext("2d");
+      var width = 10;
+      var color = colors.style;
+      var pDraw = $("#drawCanvas").offset();
+      var currP = null;
+
+      $("#drawCanvas").bind("touchstart", function (e) {
+        e.preventDefault();
+        ctx.beginPath();
+      });
+
+      $("#drawCanvas").bind("touchmove", function (e) {
+        var event = e.originalEvent;
+        e.preventDefault();
+        currP = {
+          X: event.touches[0].pageX - pDraw.left,
+          Y: event.touches[0].pageY - pDraw.top,
+        };
+        draw_line(currP);
+      });
+
+      $("#drawCanvas").bind("touchend", function (e) {
+        e.preventDefault();
+      });
+
+      function draw_line(p) {
+        ctx.lineWidth = width;
+        ctx.lineCap = "round";
+        ctx.lineTo(p.X, p.Y);
+        ctx.moveTo(p.X, p.Y);
+        ctx.strokeStyle = color;
+        ctx.stroke();
+      }
+    }
+  });
 }
+
+// 사진 찍기
+
+$(function () {
+  $("#camera").change(function (e) {
+    $("#pic").attr("src", URL.createObjectURL(e.target.files[0]));
+  });
+});

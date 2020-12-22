@@ -1094,13 +1094,18 @@ footer img {
 
 /* 사진찍기와 불러오기 css 부분 */
 
-.take_pictures {
-  width: 100px;
-  height: 20px;
+.wrist-bg {
+  position: relative;
 }
 
-.load_file {
-  margin-top: 20px;
-  width: 100px;
-  height: 20px;
+.take-photo {
+  position: absolute;
+  left: 100px;
+  top: 50px;
+}
+
+.import-photo {
+  position: absolute;
+  left: 100px;
+  top: 100px;
 }
